@@ -21,7 +21,7 @@ class CategoryMealsScreen extends StatelessWidget {
     }).toList();
     return Scaffold(
       appBar: AppBar(
-        title: Text(categoryTitle),
+        title: Text(this.runtimeType.toString() + '-' + categoryTitle),
       ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
