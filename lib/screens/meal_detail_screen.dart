@@ -36,7 +36,7 @@ class MealDetailScreen extends StatelessWidget {
     final selectedMeal = DUMMY_MEALS.firstWhere((meal) => meal.id == mealId);
     return Scaffold(
       appBar: AppBar(
-        title: Text(this.runtimeType.toString() + '-${selectedMeal.title}'),
+        title: Text('${selectedMeal.title}'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -85,6 +85,14 @@ class MealDetailScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.delete,
+        ),
+        onPressed: () {
+          Navigator.of(context).pop(mealId);
+        },
       ),
     );
   }
