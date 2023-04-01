@@ -101,15 +101,15 @@ class _MyAppState extends State<MyApp> {
             MealDetailScreen(_toggleFavorite, _isMealFavorite),
         FiltersScreen.routeName: (ctx) => FiltersScreen(_filters, _setFilters),
       },
-      onGenerateRoute: (settings) {
-        print(settings.arguments);
-        // if (settings.name == '/meal-detail') {
-        //   return ...;
-        // } else if (settings.name == '/something-else') {
-        //   return ...;
-        // }
-        // return MaterialPageRoute(builder: (ctx) => CategoriesScreen(),);
-      },
+      //onGenerateRoute: (settings) {
+      // print(settings.arguments);
+      // if (settings.name == '/meal-detail') {
+      //   return ...;
+      // } else if (settings.name == '/something-else') {
+      //   return ...;
+      // }
+      // return MaterialPageRoute(builder: (ctx) => CategoriesScreen(),);
+      //},
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
           builder: (ctx) => CategoriesScreen(),
